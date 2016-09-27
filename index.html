@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AdBello</title>
+  
+    <!-- Bootstrap Core CSS -->
+    <link href="Styles/bootstrap.css" rel="stylesheet">
+ 
+    <!-- Theme CSS -->
+   <link href="Styles/freelancer.css" rel="stylesheet">
+   <link href="Styles/freelancer.min.css" rel="stylesheet">
+   
+
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js">
+       
+   </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+
+
+    <!-- Custom Fonts -->
+<link href="Styles/style.css" rel="stylesheet">
+<link  href="Styles/font-awesome.min.css" rel="stylesheet" >
+<link href="Styles/css.css" rel="stylesheet">
+   
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style type="text/css">
+    .drop_down:hover > ul.dropdown-menu 
+    {
+    display: block; 
+    }
+    .drop_down > ul.dropdown-menu 
+    {
+    position: absolute;
+    }    
+</style>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "home.htm"
+    })
+    .when("/billboard", {
+        templateUrl : "billboard.htm"
+    })
+    .when("/newspaper", {
+        templateUrl : "newspaper.htm"
+    })
+    .when("/tv", {
+        templateUrl : "tv.htm"
+    })
+.when("/radio", {
+        templateUrl : "radio.htm"
+    })
+.when("/moving_vehicle", {
+        templateUrl : "moving_vehicle.htm"
+    })
+.when("/about", {
+        templateUrl : "home.htm"
+    })
+.when("/pages", {
+        templateUrl : "home.htm"
+    })
+.when("/contact", {
+        templateUrl : "home.htm"
+    })
+.when("/portfolio", {
+        templateUrl : "home.htm"
+    })
+    .otherwise({
+      redirectTo: 'home.htm'
+    });
+});
+</script>
+</head>
+
+<body ng-app="myApp" id="page-top" class="index">
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix-top" style="background-color:#2C3E50">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Adbello</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"  style="color: #fff;" >
+                    <li class="hidden active">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li class="page-scroll drop_down">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    
+                    <li class="page-scroll">
+                        <a href="#pages">Pages</a>
+                    </li>
+                    
+                    <li class="page-scroll drop_down">
+                        <a href="">Product</a>
+                         <ul role="menu" class="dropdown-menu">
+                            <li class="nav-item"><a href="#billboard">Billboard</a></li>
+                            <li class="nav-item"><a href="#newspaper">Newspaper</a></li>
+                            <li class="nav-item"><a href="#tv">TV</a></li>
+                            <li class="nav-item"><a href="#radio">Radio</a></li>
+                            <li class="nav-item"><a href="#moving_vehicle">Moving Vehicle</a></li>
+                        </ul>
+                    </li>  
+              
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   <div ng-view></div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Bangalore</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About</h3>
+                        <p>Adbello is place where you can put your advertisment in any medium.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright © AdBello 2016
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+    </div>
+    <!-- jQuery -->
+    <script src="Scripts/jquery_002.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="Scripts/bootstrap.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="Scripts/jquery.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="Scripts/jqBootstrapValidation.js"></script>
+    <script src="Scripts/contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="Scripts/freelancer.js"></script>
+</body>
+</html>
